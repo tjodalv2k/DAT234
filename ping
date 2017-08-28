@@ -1,0 +1,48 @@
+#!/bin/bash
+
+read -p "Enter IP adress : " ipadress
+
+ipadress="${ipadress%.*}" #remove last digit from userinput
+
+
+alive=0
+dead=0
+
+#for i in {0..255} ;do 
+#(ping $ipadress.$i -c 1 && echo $ipadress.$i &) ;done
+
+#Update
+
+for i in {0..255} ;do
+fping -c1 -t150 $ipadress.$i 2>/dev/null 1>/dev/null
+
+if [ "$?" = 0 ]
+	then
+
+		echo "$ipadress.$i is active"
+					((alive++))
+		else
+					((dead++))
+	fi
+done
+
+echo "$alive hosts responded / $dead hosts did not respond"
+
+
+
+# && echo $ipadress.$p &) ;done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
