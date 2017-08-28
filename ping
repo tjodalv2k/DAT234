@@ -30,7 +30,6 @@ echo "$alive hosts responded / $dead hosts did not respond"
 
 
 
-# && echo $ipadress.$p &) ;done
 
 
 
