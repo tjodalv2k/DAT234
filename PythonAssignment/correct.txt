@@ -1,0 +1,5 @@
+# Correct password for hack_easy:
+"pc"
+
+# Correct password for hack_hard:
+"b1d1dcb9d7e88891a227e4013fbec201" / "makikakaka"
